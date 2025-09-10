@@ -269,7 +269,7 @@
             font-size: 1.5rem;
         }
 
-        /* NEW CALENDAR SECTION STYLES */
+        /* CALENDAR SECTION STYLES */
         .calendar-section {
             margin: 3rem 0;
             background: #f8f9fa;
@@ -401,20 +401,6 @@
             color: white;
         }
 
-        @media (max-width: 768px) {
-            .calendar-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .deadlines-panel {
-                order: -1;
-            }
-
-            .calendar-controls {
-                flex-wrap: wrap;
-            }
-        }
-
         footer {
             background: #1e3c72;
             color: white;
@@ -461,6 +447,18 @@
 
             .members-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .calendar-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .deadlines-panel {
+                order: -1;
+            }
+
+            .calendar-controls {
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -523,7 +521,6 @@
                     <p>We meet four times per year to review standards and provide industry input. Meetings are hosted at SAMSA with professional oversight and coordination.</p>
                 </section>
 
-                <!-- NEW CALENDAR SECTION -->
                 <section id="calendar" class="section">
                     <h3>📅 Standards Review Calendar</h3>
                     <div class="calendar-section">
@@ -651,4 +648,82 @@
                         <div class="member-card">
                             <div class="company-logo">Anton Dutoit Yacht Design</div>
                             <div class="member-name">Sean van Rensburg</div>
-                            <div class="member-company">Anton
+                            <div class="member-company">Anton Dutoit Yacht Design</div>
+                            <a href="https://www.antondu.com/" class="member-website">Visit Website</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="section">
+                    <h3>Contact Us</h3>
+                    
+                    <div class="contact-info">
+                        <h4>Get In Touch</h4>
+                        <p>Have questions about ISO TC188 standards, committee meetings, or want to participate? We're here to help.</p>
+                        
+                        <a href="mailto:standards@samsa.org.za?subject=ISO TC188 Inquiry" class="contact-email">
+                            📧 standards@samsa.org.za
+                        </a>
+                        
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                            This is the official contact email for SABS TC188 (South African Bureau of Standards Technical Committee 188)
+                        </p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                        <div class="about-card">
+                            <h4>📋 Standards Inquiries</h4>
+                            <p>Questions about specific ISO standards, ballot deadlines, or technical documentation.</p>
+                            <a href="mailto:standards@samsa.org.za?subject=Standards Inquiry - ISO TC188" style="color: #2a5298; text-decoration: none; font-weight: 500;">
+                                → Send Standards Query
+                            </a>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h4>🤝 Committee Participation</h4>
+                            <p>Interested in joining our volunteer committee or attending meetings? Learn about participation requirements.</p>
+                            <a href="mailto:standards@samsa.org.za?subject=Committee Participation - ISO TC188" style="color: #2a5298; text-decoration: none; font-weight: 500;">
+                                → Join Our Committee
+                            </a>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h4>📅 Meeting Information</h4>
+                            <p>Questions about upcoming meetings, agendas, or accessing meeting materials.</p>
+                            <a href="mailto:standards@samsa.org.za?subject=Meeting Information - ISO TC188" style="color: #2a5298; text-decoration: none; font-weight: 500;">
+                                → Meeting Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                        <h4 style="color: #1e3c72; margin-bottom: 1rem; text-align: center;">Committee Coordination</h4>
+                        <div style="text-align: center;">
+                            <p><strong>Hosted by:</strong> South African Maritime Safety Authority (SAMSA)</p>
+                            <p><strong>Standards Body:</strong> South African Bureau of Standards (SABS)</p>
+                            <p><strong>Meeting Frequency:</strong> Four times per year</p>
+                            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                                Our committee operates under the auspices of SAMSA with professional oversight and coordination by SABS technical standards experts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #2a5298, #1e3c72); color: white; padding: 2rem; border-radius: 15px; text-align: center; margin: 2rem 0;">
+                        <h4 style="margin-bottom: 1rem;">🚨 Urgent Standards Issues</h4>
+                        <p>For time-sensitive ballot deadlines or critical standards issues that require immediate attention:</p>
+                        <a href="mailto:standards@samsa.org.za?subject=URGENT: ISO TC188 Standards Issue" 
+                           style="display: inline-block; background: #ff6b6b; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: all 0.3s ease;">
+                            🚨 Report Urgent Issue
+                        </a>
+                    </div>
+                </section>
+
+                <section id="participate" class="section">
+                    <h3>How to Participate</h3>
+                    
+                    <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                        <h4 style="color: #1e3c72; margin-bottom: 1.5rem; text-align: center;">Join Our Standards Committee</h4>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                            <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #2a5298;">
+                                <h5 style="color: #1e3c72; margin-bottom: 1rem;">1. Express Interest</h5>
