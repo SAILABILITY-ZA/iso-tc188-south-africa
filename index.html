@@ -727,3 +727,141 @@
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                             <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #2a5298;">
                                 <h5 style="color: #1e3c72; margin-bottom: 1rem;">1. Express Interest</h5>
+                                <p style="margin-bottom: 1rem;">Contact us to learn about committee requirements and current openings.</p>
+                                <a href="mailto:standards@samsa.org.za?subject=Interest in Joining ISO TC188 Committee" 
+                                   style="color: #2a5298; text-decoration: none; font-weight: 500;">
+                                    → Send Interest Email
+                                </a>
+                            </div>
+                            
+                            <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #2a5298;">
+                                <h5 style="color: #1e3c72; margin-bottom: 1rem;">2. Industry Expertise</h5>
+                                <p style="margin-bottom: 1rem;">We welcome professionals from marine manufacturing, design, safety, and related fields.</p>
+                                <p style="color: #666; font-size: 0.9rem;">Areas: Boat building, marine engineering, safety systems, propulsion, electrical systems</p>
+                            </div>
+                            
+                            <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #2a5298;">
+                                <h5 style="color: #1e3c72; margin-bottom: 1rem;">3. Commitment</h5>
+                                <p style="margin-bottom: 1rem;">Attend quarterly meetings and participate in standards review processes.</p>
+                                <p style="color: #666; font-size: 0.9rem;">Time commitment: ~4-6 hours per quarter</p>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <a href="mailto:standards@samsa.org.za?subject=ISO TC188 Participation Application&body=Hi,%0D%0A%0D%0AI am interested in participating in the ISO TC188 South Africa committee.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0APosition:%0D%0ARelevant Experience:%0D%0AContact Number:%0D%0A%0D%0APlease provide information about:%0D%0A- Committee requirements%0D%0A- Next meeting dates%0D%0A- How to get involved%0D%0A%0D%0AThank you!" 
+                               class="cta-button" style="margin-top: 1rem;">
+                                📧 Apply to Join Committee
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <h4>🌍 Global Impact</h4>
+                            <p>Your input helps shape international standards that affect marine safety and commerce worldwide. South African expertise contributes to global best practices.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h4>🏭 Industry Benefits</h4>
+                            <p>Participating companies gain early insight into upcoming standards, influence their development, and ensure their interests are represented.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h4>🤝 Networking</h4>
+                            <p>Connect with industry leaders, share knowledge, and build relationships within South Africa's marine manufacturing community.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ISO TC188 South Africa</h4>
+                    <p>Marine Standards Committee</p>
+                    <p>Hosted by SAMSA</p>
+                    <p>Coordinated by SABS</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <p><a href="#about">About Us</a></p>
+                    <p><a href="#calendar">Calendar</a></p>
+                    <p><a href="#members">Members</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:standards@samsa.org.za">standards@samsa.org.za</a></p>
+                    <p>SABS Technical Committee 188</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <p><a href="https://www.iso.org/committee/53450.html" target="_blank">ISO TC188 International</a></p>
+                    <p><a href="https://www.samsa.org.za" target="_blank">SAMSA</a></p>
+                    <p><a href="https://www.sabs.co.za" target="_blank">SABS</a></p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #2a5298; padding-top: 2rem; margin-top: 2rem;">
+                <p>&copy; 2025 ISO TC188 South Africa. All rights reserved. | A volunteer committee under SAMSA auspices.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Calendar refresh function
+        function refreshCalendar() {
+            const iframe = document.getElementById('mainCalendar');
+            iframe.src = iframe.src;
+        }
+
+        // Update deadline days dynamically
+        function updateDeadlineDays() {
+            const today = new Date();
+            const deadlines = [
+                { date: new Date('2025-07-25'), element: document.querySelector('.deadline-item.critical .deadline-days') },
+                { date: new Date('2025-09-04'), element: document.querySelector('.deadline-item.warning .deadline-days') }
+            ];
+
+            deadlines.forEach(deadline => {
+                if (deadline.element) {
+                    const timeDiff = deadline.date - today;
+                    const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                    
+                    if (daysDiff > 0) {
+                        deadline.element.textContent = `${daysDiff} days remaining`;
+                    } else if (daysDiff === 0) {
+                        deadline.element.textContent = 'Due today!';
+                    } else {
+                        deadline.element.textContent = 'Overdue';
+                    }
+                }
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDeadlineDays();
+            
+            // Update deadline days every hour
+            setInterval(updateDeadlineDays, 3600000);
+        });
+    </script>
+</body>
+</html>
